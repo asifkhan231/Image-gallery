@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=800);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+
+}
+
+.header h1 {
+    font-family: 'Poppins', sans-serif;
+}
+
+#searchForm {
+    margin-top: 10px;
+    padding: 5px;
+    width: 300px;
+    text-align: left;
+    font-size: 10px;
+    background: transparent;
+    border: 1px solid #09547a43;
+    border-radius: 5px;
+    outline: none;
+}
+
+#searchButton {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 10px;
+    background-color: #99d2effa;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+#searchButton:hover {
+    background-color: #53a3c8fa;
+}
+
+.searchResults {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    flex-wrap: wrap;
+    margin: 30px 90px;
+}
+
+.searchResult {
+    width: 30%;
+
+    height: 100%;
+    margin-bottom: 60px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    /* transition: ease-in-out; */
+    transition: opacity 0.2s ease-in-out;
+
+}
+
+.searchResult img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.searchResult a {
+    text-decoration: none;
+    font-size: 10px;
+    color: #102a38d0;
+    text-transform: capitalize;
+    display: block;
+    padding: 10px;
+}
+
+.searchResult:hover {
+    opacity: 0.8;
+}
+
+.show-more {
+    background-color: #99d2effa;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin: 30px auto;
+    text-align: center;
+    color: white;
+    display: block;
+    cursor: pointer;
+    display: none;
+    transition: 0.2s ease-in-out;
+}
+
+.show-more:hover {
+    background-color: #53a3c8fa;
+}
+
+@media screen and (max-width:750px) {
+    .searchResult {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    #searchForm {
+        width: 200px;
+    }
+
+    .searchResult {
+        width: 100%;
+    }
+}
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading p{
+    font-size: 30px;
+    font-weight: bold;
+}
